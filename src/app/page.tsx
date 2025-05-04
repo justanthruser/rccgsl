@@ -78,7 +78,7 @@ async function LatestSermonCard() {
 // Live Stream Embed Component
 function LiveStreamEmbed() {
   // TODO: Replace with the actual YouTube Live Stream URL or Embed ID
-  const liveStreamUrl = "https://www.youtube.com/embed/live_stream?channel=UC...&autoplay=1"; // Replace UC... with channel ID
+  const liveStreamUrl = "https://www.youtube.com/embed/live_stream?channel=UC3z9rRoiie3RXzhUxv1Bdqw&autoplay=1"; // Replace UC... with channel ID
 
   return (
     <Card className="bg-secondary">
@@ -123,7 +123,7 @@ export default function Home() {
         />
         <div className="relative z-10 container px-4 md:px-6">
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-md animate-fade-in-up">
-            Welcome to Solution Centre
+            Welcome to RCCG Sierra Leone
           </h1>
           <p className="mx-auto max-w-[700px] text-lg md:text-xl mt-4 mb-8 drop-shadow animate-fade-in-up animation-delay-200">
             A place of worship, community, and finding solutions in Christ.
