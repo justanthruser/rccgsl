@@ -171,7 +171,7 @@ export function AiChat() {
               </p>
           </DialogFooter>
           <p className="text-xs text-muted-foreground text-center mt-2">
-            Powered by <a href="https://adrit.ai" target="_blank" rel="noopener noreferrer" className="underline">Powered by Adrit</a>
+            Powered by <a href="https://dorbai.com" target="_blank" rel="noopener noreferrer" className="underline">Adrit</a>
           </p>
         </DialogContent>
       </Dialog>
