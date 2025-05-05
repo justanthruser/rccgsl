@@ -87,7 +87,7 @@ export function AiChat() {
           <DialogHeader className="p-4 border-b">
             <DialogTitle className="flex items-center gap-2">
               <Bot className="h-5 w-5 text-primary" />
-              Solution Centre Assistant
+              AI Assistant
             </DialogTitle>
           </DialogHeader>
           <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>
@@ -170,6 +170,9 @@ export function AiChat() {
                 Press <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100"><CornerDownLeft size={10} /></kbd> to send.
               </p>
           </DialogFooter>
+          <p className="text-xs text-muted-foreground text-center mt-2">
+            Powered by <a href="https://dorbai.com" target="_blank" rel="noopener noreferrer" className="underline">Adrit</a>
+          </p>
         </DialogContent>
       </Dialog>
     </>

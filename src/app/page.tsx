@@ -118,7 +118,7 @@ export default function Home() {
           <div className="grid gap-8 lg:grid-cols-2 items-center">
             <div className="space-y-6 animate-slide-up">
               <h1 className="text-gradient">
-                Welcome to RCCG Solution Centre
+                Welcome to RCCG Sierra Leone - Solution Centre
               </h1>
               <p className="text-xl text-muted-foreground">
                 Where miracles happen and lives are transformed through faith, love, and community.
@@ -135,9 +135,9 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <div className="relative h-[400px]">
+            {/* <div className="relative h-[400px]">
               <HeroAnimations />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -170,7 +170,7 @@ export default function Home() {
             </CardHeader>
             <CardContent>
               <ul className="space-y-2">
-                <li>Join a Ministry</li>
+                <li>Join a Department</li>
                 <li>Volunteer</li>
                 <li>Community Outreach</li>
               </ul>
@@ -186,10 +186,10 @@ export default function Home() {
             </CardHeader>
             <CardContent>
               <address className="not-italic">
-                123 Church Street<br />
-                City, State 12345<br />
+                69 Sanders Street<br />
+                Freetown, Sierra Leone<br />
                 <a href="tel:+1234567890" className="text-primary hover:underline">
-                  (123) 456-7890
+                  (234) 805 711 9569
                 </a>
               </address>
             </CardContent>
