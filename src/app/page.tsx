@@ -154,9 +154,9 @@ export default function Home() {
             </CardHeader>
             <CardContent>
               <ul className="space-y-2">
-                <li>Sunday Service: 10:00 AM</li>
-                <li>Bible Study: Wednesday 7:00 PM</li>
-                <li>Prayer Meeting: Friday 7:00 PM</li>
+                <Link href="/events" className="flex items-center gap-2">Sunday Service: 10:00 AM</Link>
+                <Link href="/events" className="flex items-center gap-2">Bible Study: Wednesday 7:00 PM</Link>
+                <Link href="/events" className="flex items-center gap-2">Prayer Meeting: Friday 7:00 PM</Link>
               </ul>
             </CardContent>
           </Card>
@@ -170,9 +170,9 @@ export default function Home() {
             </CardHeader>
             <CardContent>
               <ul className="space-y-2">
-                <li>Join a Department</li>
-                <li>Volunteer</li>
-                <li>Community Outreach</li>
+                <Link href="https://forms.gle/ExETxADCyYWu5k9k7" className="flex items-center gap-2">Join a Department</Link>
+                <Link href="https://forms.gle/ExETxADCyYWu5k9k7" className="flex items-center gap-2">Volunteer</Link>
+                <Link href="https://forms.gle/ExETxADCyYWu5k9k7" className="flex items-center gap-2">Community Outreach</Link>
               </ul>
             </CardContent>
           </Card>
