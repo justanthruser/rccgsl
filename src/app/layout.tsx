@@ -10,21 +10,21 @@ import { ThemeProvider } from '@/components/theme-provider';
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
-  title: 'Solution Centre Online - RCCGSL',
+  title: 'RCCG SL',
   description: 'Welcome to the Redeemed Christian Church of God, Solution Centre - Where miracles happen.',
   keywords: 'RCCG, church, christian, worship, solution centre, faith, community',
-  authors: [{ name: 'RCCG Solution Centre' }],
+  authors: [{ name: 'RCCG SL' }],
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://rccgsl.org',
-    title: 'Solution Centre Online - RCCGSL',
+    title: 'RCCG SL',
     description: 'Welcome to the Redeemed Christian Church of God, Solution Centre - Where miracles happen.',
-    siteName: 'RCCG Solution Centre',
+    siteName: 'RCCG SL',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Solution Centre Online - RCCGSL',
+    title: 'RCCG SL',
     description: 'Welcome to the Redeemed Christian Church of God, Solution Centre - Where miracles happen.',
   },
 };
