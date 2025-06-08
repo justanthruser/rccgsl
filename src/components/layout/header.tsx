@@ -1,3 +1,5 @@
+"use client";
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
@@ -7,7 +9,7 @@ import { cn } from '@/lib/utils';
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Events', href: '/events' },
+  { name: 'Activities', href: '/events' },
   { name: 'Sermons', href: '/sermons' },
   { name: 'Give', href: '/give' },
   { name: 'Parishes', href: '/parishes', icon: <MapPin className="w-4 h-4" /> },
