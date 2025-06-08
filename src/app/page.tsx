@@ -118,7 +118,7 @@ export default function Home() {
           <div className="grid gap-8 lg:grid-cols-2 items-center">
             <div className="space-y-6 animate-slide-up">
               <h1 className="text-gradient">
-                Welcome to RCCG Sierra Leone - Solution Centre
+                Welcome to RCCG Sierra Leone
               </h1>
               <p className="text-xl text-muted-foreground">
                 Where miracles happen and lives are transformed through faith, love, and community.
