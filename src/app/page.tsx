@@ -111,33 +111,79 @@ function LiveStreamEmbed() {
 
 export default function Home() {
   return (
-    <div className="space-y-12">
+    <div className="space-y-0">
       {/* Hero Section */}
-      <section className="relative -mt-8 py-20 px-4 bg-gradient-to-b from-primary/10 to-background">
-        <div className="container mx-auto max-w-5xl">
-          <div className="grid gap-8 lg:grid-cols-2 items-center">
-            <div className="space-y-6 animate-slide-up">
-              <h1 className="text-gradient">
-                Welcome to RCCG Sierra Leone - Solution Centre
-              </h1>
-              <p className="text-xl text-muted-foreground">
-                Where miracles happen and lives are transformed through faith, love, and community.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button asChild size="lg">
-                  <Link href="/events">
-                    Join Us
-                    <ChevronRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button variant="outline" size="lg" asChild>
-                  <Link href="#live-service">Watch Live</Link>
-                </Button>
-              </div>
+      <section className="relative min-h-screen flex items-center justify-center py-20 bg-cover bg-center w-full" 
+               style={{
+                 backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/church-bg.jpg")',
+                 backgroundAttachment: 'fixed',
+                 backgroundSize: 'cover',
+                 backgroundPosition: 'center',
+                 margin: 0,
+                 paddingLeft: '1rem',
+                 paddingRight: '1rem'
+               }}>
+        <div className="absolute inset-0"></div>
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
+          <div className="space-y-8">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+              Welcome to RCCG Sierra Leone
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
+              Where miracles happen and lives are transformed through faith, love, and community.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+                <Link href="/events" className="flex items-center">
+                  Join Us
+                  <ChevronRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10">
+                <Link href="#live-service" className="flex items-center">
+                  Watch Live
+                </Link>
+              </Button>
             </div>
-            {/* <div className="relative h-[400px]">
-              <HeroAnimations />
-            </div> */}
+          </div>
+        </div>
+        <div className="absolute bottom-8 left-0 right-0 flex justify-center">
+          <a 
+            href="#welcome" 
+            className="animate-bounce w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white"
+            aria-label="Scroll down"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      {/* Welcome Section */}
+      <section id="welcome" className="py-20 bg-white">
+        <div className="container mx-auto max-w-5xl px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Welcome to Our Church</h2>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-lg text-gray-700 mb-6">
+                We are a loving community of believers committed to spreading the gospel of Jesus Christ. 
+                Our mission is to raise people who will make it to heaven and take as many people as possible with them.
+              </p>
+              <Button asChild>
+                <Link href="/about" className="mt-4">
+                  Learn More About Us
+                </Link>
+              </Button>
+            </div>
+            <div className="relative h-80 rounded-lg overflow-hidden">
+              <Image 
+                src="/images/church-interior.jpg" 
+                alt="Church Interior"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -202,6 +248,77 @@ export default function Home() {
         <div className="grid gap-8 lg:grid-cols-2">
           <LiveStreamEmbed />
           <LatestSermonCard />
+        </div>
+      </section>
+
+      {/* Prayer Request Section */}
+      <section id="prayer-request" className="py-20 bg-gray-50">
+        <div className="container mx-auto max-w-5xl px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Submit a Prayer Request</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              We believe in the power of prayer. Share your prayer requests with us, and our prayer team will pray for you.
+            </p>
+          </div>
+          
+          <div className="bg-white rounded-lg shadow-lg p-8 max-w-3xl mx-auto">
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                    Your Name (Optional)
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder="Peter Favor"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                    Email (Optional)
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder="example@gmail.com"
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <label htmlFor="prayer-request" className="block text-sm font-medium text-gray-700 mb-1">
+                  Your Prayer Request *
+                </label>
+                <textarea
+                  id="prayer-request"
+                  rows={5}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Please share your prayer request here..."
+                  required
+                ></textarea>
+              </div>
+              
+              <div className="flex items-center">
+                <input
+                  id="prayer-privacy"
+                  type="checkbox"
+                  className="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"
+                />
+                <label htmlFor="prayer-privacy" className="ml-2 block text-sm text-gray-700">
+                  I would like this request to remain private (only visible to prayer team)
+                </label>
+              </div>
+              
+              <div className="text-center">
+                <Button type="submit" size="lg" className="px-8">
+                  Submit Prayer Request
+                </Button>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
     </div>
