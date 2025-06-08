@@ -73,8 +73,77 @@ const parishes = [
     services: ['Sunday: 9:00 AM - 12:00 PM', 'Thursday: 6:00 PM - 7:30 PM']
   }
 ,
+  {
+    name: 'Shining Light Parish',
+    address: 'Tardi, Lungi',
+    phone: '+232 30 194 409',
+    pastor: 'Pastor Alfred Deen Kamara',
+    services: ['Sunday: 8:30 AM - 11:30 AM', 'Tuesday: 5:30 PM - 7:00 PM']
+  },
+  {
+    name: 'Word of Life Parish',
+    address: 'Transmeter, Lungi',
+    phone: '+232 79 429 376',
+    pastor: 'Pastor Emmanuel M. Sesay',
+    services: ['Sunday: 9:00 AM - 12:00 PM', 'Thursday: 6:00 PM - 7:30 PM']
+  },
+  {
+    name: 'Dominion Area',
+    address: 'Bernlyn Primary School, A.J. Momoh Street, Tower Hill, Freetown',
+    phone: '+232 76 446 131',
+    pastor: 'Pastor Samuel Olajide Akingbade',
+    services: ['Sunday: 8:00 AM - 11:00 AM', 'Wednesday: 5:30 PM - 7:00 PM']
+  },
+  {
+    name: 'Liberty Model Parish',
+    address: 'New England Mount Camel, Behind International School, Freetown',
+    phone: '+232 77 941 929',
+    pastor: 'Pastor John Paul Anyichie',
+    services: ['Sunday: 9:30 AM - 12:30 PM', 'Friday: 6:00 PM - 7:30 PM']
+  },
+  {
+    name: 'Mega Dominion Assembly Parish',
+    address: 'Makoloh, Koya Chiefdom',
+    phone: '+232 78 912 870',
+    pastor: 'Pastor Michael Akingbade',
+    services: ['Sunday: 8:00 AM - 11:00 AM', 'Wednesday: 5:30 PM - 7:00 PM']
+  },
+  {
+    name: 'Rock of Ages Parish',
+    address: 'Alpha Wurie Drive, Hill Station',
+    phone: '+232 76 384 917',
+    pastor: 'Pastor Daniel Momoh Sandy',
+    services: ['Sunday: 9:00 AM - 12:00 PM', 'Thursday: 6:00 PM - 7:30 PM']
+  },
+  {
+    name: 'Dominion Praise Parish',
+    address: "N'Guala, Moyamba District",
+    phone: '+232 75 695 550',
+    pastor: 'Pastor Ambrose Joshua Samu',
+    services: ['Sunday: 8:30 AM - 11:30 AM', 'Tuesday: 5:30 PM - 7:00 PM']
+  },
+  {
+    name: 'Garden of Peace Parish',
+    address: 'No 9, Redemption School, Wilberforce',
+    phone: '+232 76 625 626',
+    pastor: 'Pastor Makallay Bangura',
+    services: ['Sunday: 9:00 AM - 12:00 PM', 'Friday: 6:00 PM - 7:30 PM']
+  },
+  {
+    name: 'Prince of Peace Parish',
+    address: 'IMATT, Hill Station, Freetown',
+    phone: '+232 77 438 306',
+    pastor: 'Pastor Joshua Kallon',
+    services: ['Sunday: 8:00 AM - 11:00 AM', 'Wednesday: 5:30 PM - 7:00 PM']
+  },
+  {
+    name: 'City of God',
+    address: 'Furah Bay College, Freetown',
+    phone: '+232 99 436 040',
+    pastor: 'Pastor Samson Adeniyi Ajakaye',
+    services: ['Sunday: 9:00 AM - 12:00 PM', 'Thursday: 6:00 PM - 7:30 PM']
+  },
   // Add more parishes as needed
-  // Total of 78 parishes available
   // Contact admin for full list
 ];
 
