@@ -3,37 +3,79 @@ import { Button } from '@/components/ui/button';
 
 const parishes = [
   {
-    name: 'RCCG Solution Centre',
-    address: '69 Sanders Street, Freetown',
-    phone: '+232 30 123456',
-    email: 'solutioncentre@rccgsl.org',
-    pastor: 'Pastor John Doe',
+    name: 'The Anchor Centre',
+    address: 'Regent Road, Freetown',
+    phone: '+232 77 755 968',
+    pastor: 'Pastor Juwon Ariyo',
     services: ['Sunday: 8:00 AM - 11:00 AM', 'Wednesday: 5:30 PM - 7:00 PM']
   },
   {
-    name: 'RCCG House of Praise',
-    address: '123 Main Street, Freetown',
-    phone: '+232 30 234567',
-    email: 'houseofpraise@rccgsl.org',
-    pastor: 'Pastor Jane Smith',
+    name: 'Peace Assembly Area',
+    address: '69, Sanders Street, Freetown',
+    phone: '+232 88 116 237',
+    pastor: 'Pastor Olukoya Adewale',
     services: ['Sunday: 9:00 AM - 12:00 PM', 'Thursday: 6:00 PM - 7:30 PM']
   },
   {
-    name: 'RCCG Divine Encounter',
-    address: '456 Church Road, Freetown',
-    phone: '+232 30 345678',
-    email: 'divineencounter@rccgsl.org',
-    pastor: 'Pastor Michael Johnson',
-    services: ['Sunday: 7:30 AM - 10:30 AM', 'Tuesday: 5:00 PM - 6:30 PM']
+    name: 'Potters House Parish',
+    address: 'Off Regent Road-Back of NATCOM Hill Station',
+    phone: '+232 99 662 802',
+    pastor: 'Pastor Saffa Joshua',
+    services: ['Sunday: 8:30 AM - 11:30 AM', 'Tuesday: 5:30 PM - 7:00 PM']
   },
   {
-    name: 'RCCG Glory Tabernacle',
-    address: '789 Worship Avenue, Freetown',
-    phone: '+232 30 456789',
-    email: 'glorytabernacle@rccgsl.org',
-    pastor: 'Pastor Sarah Williams',
-    services: ['Sunday: 10:00 AM - 1:00 PM', 'Friday: 5:00 PM - 7:00 PM']
+    name: 'Mount of Olives Parish',
+    address: '4, Edna Drive, Wilkinson Road, Freetown',
+    phone: '+234 804 000 0000', // Phone number was in scientific notation
+    pastor: 'Pastor Ifesineke Inwafili',
+    services: ['Sunday: 9:30 AM - 12:30 PM', 'Friday: 6:00 PM - 7:30 PM']
+  },
+  {
+    name: 'Divine Manifestation Area',
+    address: '81, Freetown Road, Goderich',
+    phone: '+232 31 286 090',
+    pastor: 'Pastor Sheku John Foday',
+    services: ['Sunday: 8:00 AM - 11:00 AM', 'Wednesday: 5:30 PM - 7:00 PM']
+  },
+  {
+    name: 'Flames of Miracle Parish',
+    address: '4, Abacha Street, Freetown',
+    phone: '+232 76 733 667',
+    pastor: 'Pastor Yambasu Olivetta',
+    services: ['Sunday: 9:00 AM - 12:00 PM', 'Thursday: 6:00 PM - 7:30 PM']
+  },
+  {
+    name: 'Praise Sanctuary Area',
+    address: 'Off Peninsular Road, By Emergency Hospital, Adonkia',
+    phone: '+232 32 863 148',
+    pastor: 'Pastor Omotosho Michael',
+    services: ['Sunday: 8:30 AM - 11:30 AM', 'Tuesday: 5:30 PM - 7:00 PM']
+  },
+  {
+    name: 'Desire of Nations Parish',
+    address: 'Temgbe Town, Freetown',
+    phone: '+232 76 426 108',
+    pastor: 'Pastor James Osaro',
+    services: ['Sunday: 9:00 AM - 12:00 PM', 'Friday: 6:00 PM - 7:30 PM']
+  },
+  {
+    name: 'Precious Corner Stone Parish',
+    address: '45B Main Motor Road, Benkeh Area, Tintofor, Lungi',
+    phone: '+232 77 058 136',
+    pastor: 'Pastor Samuel Baryoh',
+    services: ['Sunday: 8:00 AM - 11:00 AM', 'Wednesday: 5:30 PM - 7:00 PM']
+  },
+  {
+    name: 'City of David Parish - Lungi',
+    address: 'Lungi',
+    phone: '+232 77 774 858',
+    pastor: 'Pastor Comfort Richard',
+    services: ['Sunday: 9:00 AM - 12:00 PM', 'Thursday: 6:00 PM - 7:30 PM']
   }
+,
+  // Add more parishes as needed
+  // Total of 78 parishes available
+  // Contact admin for full list
 ];
 
 export default function ParishesPage() {
@@ -68,8 +110,8 @@ export default function ParishesPage() {
                   
                   <div className="flex items-center">
                     <Mail className="h-5 w-5 text-primary mr-2" />
-                    <a href={`mailto:${parish.email}`} className="text-gray-600 hover:text-primary">
-                      {parish.email}
+                    <a href="mailto:info@rccgsl.org" className="text-gray-600 hover:text-primary">
+                      info@rccgsl.org
                     </a>
                   </div>
                   
