@@ -145,6 +145,76 @@ const parishes = [
     pastor: 'Pastor Samson Adeniyi Ajakaye',
     services: ['Sunday: 9:00 AM - 12:00 PM', 'Thursday: 6:00 PM - 7:30 PM']
   },
+  {
+    name: 'Fortress Assembly Area',
+    address: 'Soldier Tong, Looking Town, Grafton Village, Freetown',
+    phone: '+232 88 042 425',
+    pastor: 'Pastor Ben-Shidah Olukayode J.',
+    services: ['Sunday: 9:00 AM - 12:00 PM', 'Thursday: 6:00 PM - 7:30 PM']
+  },
+  {
+    name: 'Comforter Parish',
+    address: 'Old Walf, Wellington',
+    phone: '+232 78 188 574',
+    pastor: 'Pastor Kargbo Theresa',
+    services: ['Sunday: 8:00 AM - 11:00 AM', 'Wednesday: 5:30 PM - 7:00 PM']
+  },
+  {
+    name: 'Faith Assembly',
+    address: 'Freetown',
+    phone: '+232 77 008 252',
+    pastor: 'Pastor Thomas Tikeh Meindy',
+    services: ['Sunday: 9:00 AM - 12:00 PM', 'Friday: 6:00 PM - 7:30 PM']
+  },
+  {
+    name: "Joseph's Palace Area",
+    address: '58, Kroo Town Road, Opposite Adelaide Street, Freetown',
+    phone: '+232 30 088 788',
+    pastor: 'Pastor Eegunnike Patrick',
+    services: ['Sunday: 8:30 AM - 11:30 AM', 'Tuesday: 5:30 PM - 7:00 PM']
+  },
+  {
+    name: 'Miracle Assembly Parish',
+    address: 'Waterloo Street, Freetown',
+    phone: '+232 78 030 018',
+    pastor: 'Pastor Zainab Mansaray',
+    services: ['Sunday: 9:00 AM - 12:00 PM', 'Thursday: 6:00 PM - 7:30 PM']
+  },
+  {
+    name: 'Christ House',
+    address: 'Kongo Town, Freetown',
+    phone: '+232 99 723 835',
+    pastor: 'Pastor Rufin Etche',
+    services: ['Sunday: 8:00 AM - 11:00 AM', 'Wednesday: 5:30 PM - 7:00 PM']
+  },
+  {
+    name: 'Power Sanctuary Area',
+    address: '15C, Main Motor Road, Calaba Town',
+    phone: '+232 76 553 262',
+    pastor: 'Pastor Sia Momoh',
+    services: ['Sunday: 9:30 AM - 12:30 PM', 'Friday: 6:00 PM - 7:30 PM']
+  },
+  {
+    name: 'Rehoboth Parish',
+    address: 'Mayenkine, Calaba Town',
+    phone: '+232 78 182 748',
+    pastor: 'Pastor Fatu Esther Turay',
+    services: ['Sunday: 8:00 AM - 11:00 AM', 'Wednesday: 5:30 PM - 7:00 PM']
+  },
+  {
+    name: 'Power Parish',
+    address: 'Waterloo, Campbell Town',
+    phone: '+232 79 788 545',
+    pastor: 'Pastor Gilbert Sonny',
+    services: ['Sunday: 9:00 AM - 12:00 PM', 'Thursday: 6:00 PM - 7:30 PM']
+  },
+  {
+    name: 'Faith Area',
+    address: 'John F. Kennedy Primary School, Cline Town, Freetown',
+    phone: '+232 76 545 299',
+    pastor: 'Pastor Abubakar Bangura',
+    services: ['Sunday: 8:30 AM - 11:30 AM', 'Tuesday: 5:30 PM - 7:00 PM']
+  },
   // Add more parishes as needed
   // Contact admin for full list
 ];
