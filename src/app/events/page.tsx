@@ -45,7 +45,7 @@ export default async function EventsPage() {
   return (
     <div className="container py-12 md:py-16 lg:py-20">
       <h1 className="text-3xl font-bold tracking-tight mb-8 text-center md:text-left">
-        Upcoming Events
+        Upcoming Activities
       </h1>
 
       {events.length > 0 ? (
@@ -58,7 +58,7 @@ export default async function EventsPage() {
         <Card>
          <CardContent className="pt-6">
             <p className="text-center text-muted-foreground">
-                No upcoming events found. Please check back later!
+                No upcoming activities found. Please check back later!
             </p>
           </CardContent>
         </Card>
@@ -73,6 +73,6 @@ export default async function EventsPage() {
 
 // Add metadata for SEO
 export const metadata = {
-  title: 'Upcoming Events - Solution Centre Online',
-  description: 'Find out about upcoming events and activities at RCCG Solution Centre.',
+  title: 'Upcoming Activities',
+  description: 'Find out about upcoming activities at RCCG Solution Centre.',
 };
