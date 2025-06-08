@@ -117,18 +117,24 @@ export default function GivePage() {
 
                 <div>
                   <h2 className="text-lg font-medium text-gray-900 mb-4">Payment Method</h2>
-                  <div className="space-y-4">
+                  <RadioGroup
+                    value={paymentMethod}
+                    onValueChange={setPaymentMethod}
+                    className="space-y-4"
+                  >
                     <div>
-                      <RadioGroupItem value="card" id="card" className="peer sr-only" />
-                      <Label
-                        htmlFor="card"
-                        className={`flex items-center p-4 border-2 rounded-lg cursor-pointer ${
-                          paymentMethod === 'card' ? 'border-primary bg-primary/5' : 'border-gray-200'
-                        }`}
-                      >
-                        <CreditCard className="h-6 w-6 mr-3 text-primary" />
-                        <span className="font-medium">Credit/Debit Card</span>
-                      </Label>
+                      <div className="flex items-center space-x-2">
+                        <RadioGroupItem value="card" id="card" className="peer sr-only" />
+                        <Label
+                          htmlFor="card"
+                          className={`flex items-center p-4 border-2 rounded-lg cursor-pointer w-full ${
+                            paymentMethod === 'card' ? 'border-primary bg-primary/5' : 'border-gray-200'
+                          }`}
+                        >
+                          <CreditCard className="h-6 w-6 mr-3 text-primary" />
+                          <span className="font-medium">Credit/Debit Card</span>
+                        </Label>
+                      </div>
                       {paymentMethod === 'card' && (
                         <div className="mt-4 space-y-4 pl-10">
                           <div>
@@ -154,16 +160,18 @@ export default function GivePage() {
                     </div>
 
                     <div>
-                      <RadioGroupItem value="bank" id="bank" className="peer sr-only" />
-                      <Label
-                        htmlFor="bank"
-                        className={`flex items-center p-4 border-2 rounded-lg cursor-pointer ${
-                          paymentMethod === 'bank' ? 'border-primary bg-primary/5' : 'border-gray-200'
-                        }`}
-                      >
-                        <Landmark className="h-6 w-6 mr-3 text-primary" />
-                        <span className="font-medium">Bank Transfer</span>
-                      </Label>
+                      <div className="flex items-center space-x-2">
+                        <RadioGroupItem value="bank" id="bank" className="peer sr-only" />
+                        <Label
+                          htmlFor="bank"
+                          className={`flex items-center p-4 border-2 rounded-lg cursor-pointer w-full ${
+                            paymentMethod === 'bank' ? 'border-primary bg-primary/5' : 'border-gray-200'
+                          }`}
+                        >
+                          <Landmark className="h-6 w-6 mr-3 text-primary" />
+                          <span className="font-medium">Bank Transfer</span>
+                        </Label>
+                      </div>
                       {paymentMethod === 'bank' && (
                         <div className="mt-4 space-y-2 pl-10 text-sm text-gray-600">
                           <p>Please use the following bank details for your transfer:</p>
@@ -181,16 +189,18 @@ export default function GivePage() {
                     </div>
 
                     <div>
-                      <RadioGroupItem value="mobile" id="mobile" className="peer sr-only" />
-                      <Label
-                        htmlFor="mobile"
-                        className={`flex items-center p-4 border-2 rounded-lg cursor-pointer ${
-                          paymentMethod === 'mobile' ? 'border-primary bg-primary/5' : 'border-gray-200'
-                        }`}
-                      >
-                        <Send className="h-6 w-6 mr-3 text-primary" />
-                        <span className="font-medium">Mobile Money</span>
-                      </Label>
+                      <div className="flex items-center space-x-2">
+                        <RadioGroupItem value="mobile" id="mobile" className="peer sr-only" />
+                        <Label
+                          htmlFor="mobile"
+                          className={`flex items-center p-4 border-2 rounded-lg cursor-pointer w-full ${
+                            paymentMethod === 'mobile' ? 'border-primary bg-primary/5' : 'border-gray-200'
+                          }`}
+                        >
+                          <Send className="h-6 w-6 mr-3 text-primary" />
+                          <span className="font-medium">Mobile Money</span>
+                        </Label>
+                      </div>
                       {paymentMethod === 'mobile' && (
                         <div className="mt-4 space-y-4 pl-10">
                           <div>
@@ -213,7 +223,7 @@ export default function GivePage() {
                         </div>
                       )}
                     </div>
-                  </div>
+                  </RadioGroup>
                 </div>
 
                 <div className="pt-4">
