@@ -221,57 +221,99 @@ export default function Home() {
       </section>
 
       {/* Quick Links */}
-      <section className="container mx-auto max-w-5xl">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <Card className="card-hover">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <CalendarDays className="w-5 h-5 text-primary" />
-                Service Times
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-2">
-                <Link href="/events" className="flex items-center gap-2">Sunday Service: 10:00 AM</Link>
-                <Link href="/events" className="flex items-center gap-2">Bible Study: Wednesday 7:00 PM</Link>
-                <Link href="/events" className="flex items-center gap-2">Prayer Meeting: Friday 7:00 PM</Link>
-              </ul>
-            </CardContent>
-          </Card>
+      <section className="relative py-12 -mt-16 z-20">
+        <div className="container mx-auto max-w-6xl px-4">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {/* Service Times */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <Card className="relative bg-white/60 backdrop-blur-xl border-white/40 shadow-xl shadow-black/5 rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-500">
+                <CardHeader className="pb-2">
+                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <CalendarDays className="w-6 h-6 text-primary" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-gray-900 leading-tight">Service Times</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-4">
+                    <li className="flex flex-col">
+                      <span className="text-xs font-bold uppercase tracking-wider text-primary/70">Sundays</span>
+                      <Link href="/events" className="text-lg font-medium text-gray-800 hover:text-primary transition-colors flex items-center justify-between group/link">
+                        Sunday Service
+                        <span className="text-sm font-bold bg-white px-3 py-1 rounded-full shadow-sm">10:00 AM</span>
+                      </Link>
+                    </li>
+                    <li className="flex flex-col">
+                      <span className="text-xs font-bold uppercase tracking-wider text-primary/70">Wednesdays</span>
+                      <Link href="/events" className="text-lg font-medium text-gray-800 hover:text-primary transition-colors flex items-center justify-between group/link">
+                        Bible Study
+                        <span className="text-sm font-bold bg-white px-3 py-1 rounded-full shadow-sm">7:00 PM</span>
+                      </Link>
+                    </li>
+                    <li className="flex flex-col">
+                      <span className="text-xs font-bold uppercase tracking-wider text-primary/70">Fridays</span>
+                      <Link href="/events" className="text-lg font-medium text-gray-800 hover:text-primary transition-colors flex items-center justify-between group/link">
+                        Prayer Meeting
+                        <span className="text-sm font-bold bg-white px-3 py-1 rounded-full shadow-sm">7:00 PM</span>
+                      </Link>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
 
-          <Card className="card-hover">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Users className="w-5 h-5 text-primary" />
-                Get Involved
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-2">
-                <Link href="https://forms.gle/ExETxADCyYWu5k9k7" className="flex items-center gap-2">Join a Department</Link>
-                <Link href="https://forms.gle/ExETxADCyYWu5k9k7" className="flex items-center gap-2">Volunteer</Link>
-                <Link href="https://forms.gle/ExETxADCyYWu5k9k7" className="flex items-center gap-2">Community Outreach</Link>
-              </ul>
-            </CardContent>
-          </Card>
+            {/* Get Involved */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <Card className="relative bg-white/60 backdrop-blur-xl border-white/40 shadow-xl shadow-black/5 rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-500">
+                <CardHeader className="pb-2">
+                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <Users className="w-6 h-6 text-primary" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-gray-900 leading-tight">Get Involved</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid gap-3">
+                    <Link href="https://forms.gle/ExETxADCyYWu5k9k7" className="group/btn flex items-center justify-between p-4 bg-white/50 hover:bg-primary hover:text-white rounded-2xl transition-all duration-300">
+                      <span className="font-semibold">Join a Department</span>
+                      <ChevronRight className="w-5 h-5 opacity-0 group-hover/btn:opacity-100 -translate-x-2 group-hover/btn:translate-x-0 transition-all" />
+                    </Link>
+                    <Link href="https://forms.gle/ExETxADCyYWu5k9k7" className="group/btn flex items-center justify-between p-4 bg-white/50 hover:bg-primary hover:text-white rounded-2xl transition-all duration-300">
+                      <span className="font-semibold">Volunteer</span>
+                      <ChevronRight className="w-5 h-5 opacity-0 group-hover/btn:opacity-100 -translate-x-2 group-hover/btn:translate-x-0 transition-all" />
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
 
-          <Card className="card-hover sm:col-span-2 lg:col-span-1">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-primary" />
-                Visit Us
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <address className="not-italic">
-                69 Sanders Street<br />
-                Freetown, Sierra Leone<br />
-                <a href="tel:+1234567890" className="text-primary hover:underline">
-                  (234) 805 711 9569
-                </a>
-              </address>
-            </CardContent>
-          </Card>
+            {/* Visit Us */}
+            <div className="group relative lg:col-span-1 sm:col-span-2 shadow-2xl">
+              <Card className="relative bg-primary text-primary-foreground rounded-3xl overflow-hidden h-full hover:shadow-primary/20 transition-all duration-500 border-none">
+                <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-125 transition-transform">
+                  <MapPin className="w-32 h-32" />
+                </div>
+                <CardHeader className="pb-2">
+                  <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center mb-4">
+                    <MapPin className="w-6 h-6" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold leading-tight">Visit Us</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <address className="not-italic text-lg opacity-90 leading-relaxed">
+                    69 Sanders Street<br />
+                    Freetown, Sierra Leone
+                  </address>
+                  <div className="space-y-2">
+                    <span className="text-xs font-bold uppercase tracking-wider opacity-60">Call Us Anytime</span>
+                    <a href="tel:+2348057119569" className="text-2xl font-bold block hover:underline decoration-white/30 truncate">
+                      (234) 805 711 9569
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
         </div>
       </section>
 
