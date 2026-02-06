@@ -45,7 +45,7 @@ export default async function EventsPage() {
   return (
     <div className="container py-12 md:py-16 lg:py-20">
       <h1 className="text-3xl font-bold tracking-tight mb-8 text-center md:text-left">
-        Upcoming Activities
+        Weekly Activities
       </h1>
 
       {events.length > 0 ? (
