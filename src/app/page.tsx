@@ -3,101 +3,20 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { CalendarDays, Clapperboard, Users, MapPin, ChevronRight } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { getLatestYouTubeVideo, YouTubeVideo } from '@/services/youtube';
-// import { HeroAnimations } from '@/components/page/hero-animations';
 
-async function LatestSermonCard() {
-  let latestVideo: YouTubeVideo | null = null;
-  let error: string | null = null;
 
-  try {
-    latestVideo = await getLatestYouTubeVideo('rccgslchannel');
-  } catch (err) {
-    console.error("Failed to fetch latest video:", err);
-    error = "Could not load the latest sermon at this time.";
-    latestVideo = {
-      videoId: 'dQw4w9WgXcQ',
-      title: 'Sermon Placeholder',
-      description: 'Unable to load the latest sermon details.',
-      thumbnailUrl: `https://picsum.photos/480/270?random=${Date.now()}`,
-    }
-  }
-
-  return (
-    <Card className="card-hover">
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2 text-gradient">
-          <Clapperboard className="w-5 h-5" />
-          Latest Sermon
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        {error && (
-          <div className="rounded-lg bg-destructive/10 p-4 mb-4">
-            <p className="text-destructive">{error}</p>
-          </div>
-        )}
-        {latestVideo && (
-          <div className="space-y-4">
-            <div className="aspect-video overflow-hidden rounded-lg">
-              <a
-                href={`https://www.youtube.com/watch?v=${latestVideo.videoId}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Watch sermon: ${latestVideo.title}`}
-                className="block hover-scale"
-              >
-                <Image
-                  src={latestVideo.thumbnailUrl || `https://picsum.photos/480/270?random=${Date.now()}`}
-                  alt={`Thumbnail for ${latestVideo.title}`}
-                  width={480}
-                  height={270}
-                  className="w-full h-full object-cover"
-                  data-ai-hint="church sermon video"
-                />
-              </a>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-2 line-clamp-2">{latestVideo.title}</h3>
-              <p className="text-sm text-muted-foreground line-clamp-2 mb-4">{latestVideo.description}</p>
-              <Button asChild variant="default" className="w-full sm:w-auto">
-                <a
-                  href={`https://www.youtube.com/watch?v=${latestVideo.videoId}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center"
-                >
-                  Watch Now
-                  <ChevronRight className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
-            </div>
-          </div>
-        )}
-      </CardContent>
-    </Card>
-  );
-}
-
-function LiveStreamEmbed() {
-  const liveStreamUrl = "https://www.youtube.com/live/bSAfXS-9bks?si=7r4DI74Pzn1R6iTM&autoplay=1";
+function YoutubeStreamEmbed() {
+  const liveStreamUrl = "https://www.youtube.com/embed/ubMB0BFrvjA?si=2VfEGX1UDa71JUT2";
 
   return (
     <Card className="card-hover bg-secondary/50">
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2 text-gradient">
-          <Clapperboard className="w-5 h-5" />
-          Live Service
-        </CardTitle>
-        <CardDescription>Join us for our live service</CardDescription>
-      </CardHeader>
       <CardContent>
         <div className="aspect-video overflow-hidden rounded-lg shadow-lg">
           <iframe
             width="100%"
             height="100%"
             src={liveStreamUrl}
-            title="RCCG Solution Centre Live Stream"
+            title="RCCG SL Live Stream"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
@@ -162,6 +81,7 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* Welcome Section */}
       <section id="welcome" className="relative py-24 bg-gradient-to-b from-white to-slate-50/50">
         <div className="container mx-auto max-w-6xl px-4 lg:px-8">
@@ -220,6 +140,8 @@ export default function Home() {
         </div>
       </section>
 
+
+
       {/* Quick Links */}
       <section className="relative py-12 -mt-16 z-20">
         <div className="container mx-auto max-w-6xl px-4">
@@ -261,6 +183,8 @@ export default function Home() {
                 </CardContent>
               </Card>
             </div>
+
+
 
             {/* Get Involved */}
             <div className="group relative">
@@ -317,11 +241,64 @@ export default function Home() {
         </div>
       </section>
 
+
+
+      {/* <section className="relative min-h-screen flex items-center justify-center py-20 w-full overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/church-bg.jpg"
+            alt="RCCG Sierra Leone Background"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
+        </div>
+
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
+          <div className="space-y-8">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white tracking-tight">
+              Welcome to RCCG <span className="text-primary-foreground/90">Sierra Leone</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto font-light leading-relaxed">
+              Where miracles happen and lives are transformed through faith, love, and community.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 shadow-lg shadow-primary/20 transition-all hover:scale-105">
+                <Link href="/events" className="flex items-center">
+                  Join Us
+                  <ChevronRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" className="bg-transparent border-white/30 text-white hover:bg-white/10 rounded-full px-8 backdrop-blur-sm transition-all">
+                <Link href="#live-service" className="flex items-center">
+                  Watch Live
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="absolute bottom-8 left-0 right-0 flex justify-center">
+          <a
+            href="#welcome"
+            className="animate-bounce w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white"
+            aria-label="Scroll down"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </a>
+        </div>
+      </section> */}
+
+
+
       {/* Live Service Section */}
       <section id="live-service" className="container mx-auto max-w-5xl scroll-mt-20">
-        <div className="grid gap-8 lg:grid-cols-2">
-          <LiveStreamEmbed />
-          <LatestSermonCard />
+        <div className="my-10">
+          <h2 className="text-3xl font-bold mt-4 text-center">Previous Teachings</h2>
+          <p className="text-center mb-4">Watch our latest teachings and be blessed</p>
+          <YoutubeStreamEmbed />
         </div>
       </section>
 
