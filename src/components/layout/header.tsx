@@ -13,7 +13,6 @@ const navigation = [
   { name: 'Sermons', href: '/sermons' },
   { name: 'Give', href: '/give' },
   { name: 'Parishes', href: '/parishes', icon: <MapPin className="w-4 h-4" /> },
-  { name: 'Contact', href: '/contact', icon: <Mail className="w-4 h-4" /> },
 ];
 
 export function Header() {
@@ -38,7 +37,7 @@ export function Header() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
               <Image src="/favicon.ico" alt="RCCG SL" width={48} height={48} className="h-12 w-auto" />
-              <span className="text-2xl font-bold">RCCG SL</span>
+              <span className="text-2xl font-bold">RCCG Sierra Leone</span>
             </Link>
           </div>
 

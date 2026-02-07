@@ -13,7 +13,7 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">About Us</h3>
             <p className="text-gray-400 mb-4">
-              Redeemed Christian Church of God, Solution Centre is a place of worship, prayer, and community where lives are transformed by the power of God.
+              Redeemed Christian Church of God, Sierra Leone is a movement of RCCG Global in Sierra Leone with the mission of spreading the gospel of Jesus Christ and making disciples of all nations.
             </p>
             <div className="flex space-x-4">
               <a href="https://www.facebook.com/rccgsierraleone/" className="text-gray-400 hover:text-white transition-colors">
@@ -40,7 +40,6 @@ export function Footer() {
               <li><Link href="/events" className="text-gray-400 hover:text-white transition-colors">Events</Link></li>
               <li><Link href="/ministries" className="text-gray-400 hover:text-white transition-colors">Ministries</Link></li>
               <li><Link href="/give" className="text-gray-400 hover:text-white transition-colors">Give</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 
