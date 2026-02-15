@@ -19,8 +19,8 @@ const oldMemberSchema = z.object({
   fullName: z.string().min(2, "Full name must be at least 2 characters"),
   gender: z.enum(["male", "female"], { required_error: "Please select a gender" }),
   address: z.string().min(5, "Address must be at least 5 characters"),
-  phoneNumber: z.string().regex(/^(\+?\d{1,3}[- ]?)?\d{10}$/, "Please enter a valid phone number"),
-  parish: z.enum(["sl_headquarters", "freetown_central", "bo_municipal"], { required_error: "Please select a parish" }),
+  phoneNumber: z.string(),
+  parish: z.enum(["peace_assembly", "mount_of_olives", "jesus_embassy"], { required_error: "Please select a parish" }),
   isWorker: z.boolean().default(false),
   department: z.string().optional(),
 }).refine((data) => {
