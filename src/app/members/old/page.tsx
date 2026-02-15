@@ -19,8 +19,8 @@ const oldMemberSchema = z.object({
   fullName: z.string().min(2, "Full name must be at least 2 characters"),
   gender: z.enum(["male", "female"], { required_error: "Please select a gender" }),
   address: z.string().min(5, "Address must be at least 5 characters"),
-  phoneNumber: z.string().regex(/^(\+?\d{1,3}[- ]?)?\d{10}$/, "Please enter a valid phone number"),
-  parish: z.string().min(2, "Please enter your parish name"),
+  phoneNumber: z.string(),
+  parish: z.enum(["peace_assembly", "mount_of_olives", "jesus_embassy"], { required_error: "Please select a parish" }),
   isWorker: z.boolean().default(false),
   department: z.string().optional(),
 }).refine((data) => {
@@ -50,6 +50,12 @@ const departments = [
   "Other"
 ];
 
+const parishes = [
+  { key: "peace_assembly", name: "Peace Assembly" },
+  { key: "mount_of_olives", name: "Mount of Olives" },
+  { key: "jesus_embassy", name: "Jesus Embassy" }
+];
+
 export default function OldMemberRegistration() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -60,7 +66,6 @@ export default function OldMemberRegistration() {
       fullName: "",
       address: "",
       phoneNumber: "",
-      parish: "",
       isWorker: false,
       department: "",
     },
@@ -219,13 +224,20 @@ export default function OldMemberRegistration() {
                         <Building className="h-4 w-4" />
                         Parish
                       </FormLabel>
-                      <FormControl>
-                        <Input
-                          placeholder="Enter your parish name"
-                          {...field}
-                          className="h-11"
-                        />
-                      </FormControl>
+                      <Select onValueChange={field.onChange} value={field.value}>
+                        <FormControl>
+                          <SelectTrigger className="h-11">
+                            <SelectValue placeholder="Select your parish" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          {parishes.map((parish) => (
+                            <SelectItem key={parish.key} value={parish.key}>
+                              {parish.name}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
                       <FormMessage />
                     </FormItem>
                   )}
