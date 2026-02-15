@@ -10,8 +10,9 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { Loader2, User, Phone, MapPin, Users } from "lucide-react";
+import { Loader2, User, Phone, MapPin, Users, Building } from "lucide-react";
 
 const newMemberSchema = z.object({
   fullName: z.string().min(2, "Full name must be at least 2 characters"),
@@ -19,9 +20,16 @@ const newMemberSchema = z.object({
   address: z.string().min(5, "Address must be at least 5 characters"),
   phoneNumber: z.string().regex(/^(\+?\d{1,3}[- ]?)?\d{10}$/, "Please enter a valid phone number"),
   invitedBy: z.string().min(2, "Please enter who invited you"),
+  parish: z.enum(["sl_headquarters", "freetown_central", "bo_municipal"], { required_error: "Please select a parish" }),
 });
 
 type NewMemberForm = z.infer<typeof newMemberSchema>;
+
+const parishes = [
+  { key: "peace_assembly", name: "Peace Assembly" },
+  { key: "mount_of_olives", name: "Mount of Olives" },
+  { key: "jesus_embassy", name: "Jesus Embassy" }
+];
 
 export default function NewMemberRegistration() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -34,6 +42,7 @@ export default function NewMemberRegistration() {
       address: "",
       phoneNumber: "",
       invitedBy: "",
+      parish: undefined,
     },
   });
 
@@ -195,6 +204,34 @@ export default function NewMemberRegistration() {
                           className="h-11"
                         />
                       </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="parish"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="flex items-center gap-2">
+                        <Building className="h-4 w-4" />
+                        Parish
+                      </FormLabel>
+                      <Select onValueChange={field.onChange} value={field.value}>
+                        <FormControl>
+                          <SelectTrigger className="h-11">
+                            <SelectValue placeholder="Select your parish" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          {parishes.map((parish) => (
+                            <SelectItem key={parish.key} value={parish.key}>
+                              {parish.name}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
                       <FormMessage />
                     </FormItem>
                   )}
